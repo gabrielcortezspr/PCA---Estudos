@@ -49,3 +49,33 @@ Oferecer uma base sólida dos principais conceitos da linguagem C para iniciante
 - `struct`, `typedef`
 - Declaração e acesso a membros
 
+## 🗂️ Organização do repositório
+
+| Pasta | Tema |
+|---|---|
+| `01-Conceitos-Basicos` | Entrada, saída e operações simples |
+| `02-Operacoes-Matematicas` | Expressões, calculadoras e exercícios de prova |
+| `03-Estruturas-Condicionais` | `if`/`else` e `switch` aplicados a validação e classificação |
+| `04-Estruturas-Repeticao` | Laços: tabuada, estatísticas, maior e menor valor |
+| `05-Funcoes` | Funções e recursão (fatorial, hiperfatorial) |
+| `06-Arrays-Vetores` | Vetores e matrizes |
+| `07-Strings` | Manipulação de strings e parser de datas |
+| `08-Ponteiros` | Ponteiros e aritmética de ponteiros |
+| `09-Alocacao-Dinamica` | `malloc`/`free` com vetores e matrizes |
+| `10-Estruturas-Complexas` | `struct`: simulador de decaimento radioativo, seleção de jogadores |
+| `11-Exercicios-Avancados` | Desvio padrão, triângulos pitagóricos, otimização numérica |
+| `Backups-Originais` | Arquivos como foram escritos em aula (nomeados pela data, `AAAAMMDD_NNN.c`) antes da organização por tema |
+
+## ▶️ Como compilar
+
+Cada arquivo é um programa independente:
+
+```sh
+gcc -Wall -o programa "05-Funcoes/calculadora_fatorial.c" -lm
+./programa
+```
+
+## 📄 Licença
+
+[MIT](LICENSE)
+
