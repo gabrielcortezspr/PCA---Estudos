@@ -1,12 +1,10 @@
 #include<stdio.h>
 
-int matrizA[tammatriz][tammatriz];
-int matrizB[tammatriz][tammatriz];
-int tammatriz, i, j;
-
-void multiplicar(tammatriz)
+/* Multiplica duas matrizes quadradas elemento a elemento (produto de Hadamard). */
+void multiplicar(int tammatriz, int matrizA[tammatriz][tammatriz], int matrizB[tammatriz][tammatriz])
 {
-    int matriC[tammatriz][tammatriz];
+    int i, j;
+    int matrizC[tammatriz][tammatriz];
     
     for(i=0; i<tammatriz; i++)
     {
@@ -22,7 +20,7 @@ void multiplicar(tammatriz)
         {
             printf("%d ", matrizC[i][j]);
         }
-        printf("\n")
+        printf("\n");
     }
 }
 
@@ -58,7 +56,7 @@ int main()
     }
     else
     {
-        multiplicar(tammatriz);
+        multiplicar(tammatriz, matrizA, matrizB);
     }
     
     return 0;
