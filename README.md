@@ -1,81 +1,52 @@
-# 📘 Introdução à Linguagem C - PCA
+# C Programming Fundamentals
 
-Este repositório reúne os principais conteúdos e exercícios introdutórios da linguagem de programação C, abordados na disciplina de **Programação de Computadores e Algoritmos (PCA)**.
+![C](https://img.shields.io/badge/C-11-A8B9CC?logo=c&logoColor=black)
+[![build](https://github.com/gabrielcortezspr/PCA---Estudos/actions/workflows/build.yml/badge.svg)](https://github.com/gabrielcortezspr/PCA---Estudos/actions/workflows/build.yml)
+![License](https://img.shields.io/badge/license-MIT-green)
 
-## 🎯 Objetivo
+64 C programs written for the **Computer Programming and Algorithms** course (PCA) of my
+Computer Engineering degree, organized by topic, from basic I/O up to pointers, dynamic
+memory and structs. Every file is a standalone program and the whole set is compiled on every
+push by GitHub Actions.
 
-Oferecer uma base sólida dos principais conceitos da linguagem C para iniciantes, com foco em lógica de programação, estruturação de código, boas práticas e resolução de problemas clássicos de algoritmos.
+## Contents
 
-## 📚 Conteúdo
+| Folder | Topic | Examples |
+|---|---|---|
+| [`01-basics`](01-basics) | Input/output, variables, simple expressions | average of grades, sums |
+| [`02-arithmetic`](02-arithmetic) | Arithmetic and unit conversion | salary with deductions, tip calculator, °C ↔ °F, series |
+| [`03-conditionals`](03-conditionals) | `if`/`else`, `switch`, input validation | grade analysis, delivery-type recommendation from fetal weight and gestation time |
+| [`04-loops`](04-loops) | `for`, `while`, `do…while` | primes, perfect numbers, **Newton's method for √x**, multiplication table |
+| [`05-functions`](05-functions) | Functions and recursion | factorial, hyperfactorial, Fibonacci, binary → decimal, digit permutations |
+| [`06-arrays-and-matrices`](06-arrays-and-matrices) | 1D and 2D arrays | dot product, matrix sum and element-wise product, dice-roll histogram |
+| [`07-strings`](07-strings) | `string.h`, parsing | palindrome check, date validation and parsing |
+| [`08-pointers`](08-pointers) | Pointers and pointer arithmetic | character search returning positions, sub-array printing |
+| [`09-dynamic-memory`](09-dynamic-memory) | `malloc`/`free` | dynamically allocated matrices |
+| [`10-structs`](10-structs) | `struct`, `typedef` | radioactive decay simulator, team registration, player selection |
+| [`11-advanced-exercises`](11-advanced-exercises) | Putting it all together | mean and standard deviation, Pythagorean triples, numerical function optimizer |
 
-### 🔹 1. Fundamentos
-- História da linguagem C
-- Estrutura básica de um programa em C
-- Compilação e execução
-- `stdio.h`, `stdlib.h` e outras bibliotecas padrão
+Files ending in `_prova` were exam questions. Code, comments and program output are in
+Portuguese.
 
-### 🔹 2. Variáveis e Tipos de Dados
-- Tipos primitivos: `int`, `float`, `char`, `double`
-- Constantes e modificadores (`short`, `long`, `unsigned`)
-- Declaração, inicialização e escopo de variáveis
+## Building
 
-### 🔹 3. Operadores
-- Aritméticos: `+`, `-`, `*`, `/`, `%`
-- Relacionais: `==`, `!=`, `<`, `>`, `<=`, `>=`
-- Lógicos: `&&`, `||`, `!`
-- Atribuição: `=`, `+=`, `-=`, etc.
-
-### 🔹 4. Estruturas de Controle
-- Condicionais: `if`, `else`, `switch`
-- Laços: `for`, `while`, `do...while`
-- `break`, `continue`
-
-### 🔹 5. Funções
-- Declaração e definição
-- Parâmetros e retorno
-- Escopo de variáveis
-- Recursividade
-
-### 🔹 6. Arrays e Strings
-- Arrays unidimensionais e multidimensionais
-- Manipulação de strings com `string.h`
-
-### 🔹 7. Ponteiros (Introdução)
-- Conceito de ponteiros
-- Operadores `&` e `*`
-- Ponteiros e arrays
-
-### 🔹 8. Estruturas e Tipos definidos pelo usuário
-- `struct`, `typedef`
-- Declaração e acesso a membros
-
-## 🗂️ Organização do repositório
-
-| Pasta | Tema |
-|---|---|
-| `01-Conceitos-Basicos` | Entrada, saída e operações simples |
-| `02-Operacoes-Matematicas` | Expressões, calculadoras e exercícios de prova |
-| `03-Estruturas-Condicionais` | `if`/`else` e `switch` aplicados a validação e classificação |
-| `04-Estruturas-Repeticao` | Laços: tabuada, estatísticas, maior e menor valor |
-| `05-Funcoes` | Funções e recursão (fatorial, hiperfatorial) |
-| `06-Arrays-Vetores` | Vetores e matrizes |
-| `07-Strings` | Manipulação de strings e parser de datas |
-| `08-Ponteiros` | Ponteiros e aritmética de ponteiros |
-| `09-Alocacao-Dinamica` | `malloc`/`free` com vetores e matrizes |
-| `10-Estruturas-Complexas` | `struct`: simulador de decaimento radioativo, seleção de jogadores |
-| `11-Exercicios-Avancados` | Desvio padrão, triângulos pitagóricos, otimização numérica |
-| `Backups-Originais` | Arquivos como foram escritos em aula (nomeados pela data, `AAAAMMDD_NNN.c`) antes da organização por tema |
-
-## ▶️ Como compilar
-
-Cada arquivo é um programa independente:
-
-```sh
-gcc -Wall -o programa "05-Funcoes/calculadora_fatorial.c" -lm
-./programa
+```bash
+make               # compiles every program into build/<folder>/<name>
+./build/04-loops/raiz_quadrada_newton
 ```
 
-## 📄 Licença
+Or a single file:
+
+```bash
+gcc -Wall -o fibonacci 05-functions/sequencia_fibonacci.c -lm
+```
+
+## Archive
+
+[`archive/original-class-files`](archive/original-class-files) keeps the files exactly as
+they were written during class (named by date, `YYYYMMDD_NNN.c`), before being cleaned up and
+sorted into the folders above.
+
+## License
 
 [MIT](LICENSE)
-
